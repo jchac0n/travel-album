@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+    font-size: medium;
+    color: white;
+  }
+
+  header {
+    text-align: center;
+    font-size: 100px;
+    height:50px;
+  }
