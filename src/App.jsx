@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom";
 import Map from "./Map";
+import Album from "./Album";
 
 import { useLoadScript } from "@react-google-maps/api";
 
@@ -11,8 +12,16 @@ const App = () => {
 
   return (
     <div>
-      {!isLoaded ? <div>Loading...</div> : <Map />}
-      {/* <MyFuturePicturesComponent><MyFuturePicturesComponent/> */}
+      {!isLoaded ? (
+        <div>Loading...</div>
+      ) : (
+        <div>
+          <Map />
+        </div>
+      )}
+      <div>
+        <Album />
+      </div>
     </div>
   );
 };
