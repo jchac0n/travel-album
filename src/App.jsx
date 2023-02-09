@@ -6,8 +6,8 @@ import { useLoadScript } from "@react-google-maps/api";
 
 const App = () => {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "",
-    //    googleMapsApiKey: process.env.REACT_APP_GOOGLEMAPS_API_KEY,
+    //googleMapsApiKey: "",
+    googleMapsApiKey: import.meta.env.VITE_GOOGLEMAPS_API_KEY,
   });
 
   return (
