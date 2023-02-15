@@ -74,7 +74,9 @@ const GoogleInfo = () => {
   return (
     <div>
       {!token ? (
-        <button onClick={googleLogIn}>Sign In</button>
+        <button onClick={googleLogIn} className="button b-signin">
+          Sign In
+        </button>
       ) : (
         <div>Token Received!</div>
       )}

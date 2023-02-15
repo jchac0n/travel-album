@@ -12,18 +12,22 @@ const App = () => {
 
   return (
     <div>
-      {!isLoaded ? (
-        <div>Map Loading...</div>
-      ) : (
-        <div>
-          <Map />
+      <div className="main-grid">
+        <div className="account-container">
+          <GoogleInfo />
         </div>
-      )}
-      <div>
-        <GoogleInfo />
-      </div>
-      <div>
-        <Album />
+        <div className="map-container">
+          {!isLoaded ? (
+            <div>Map Loading...</div>
+          ) : (
+            <div>
+              <Map />
+            </div>
+          )}
+        </div>
+        <div className="photo-container">
+          <Album />
+        </div>
       </div>
     </div>
   );

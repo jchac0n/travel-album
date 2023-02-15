@@ -10,34 +10,59 @@ body {
     height:50px;
   }
 
+  .account-container { grid-area: account; }
+  .album-container { grid-area: album; }
+  .map-container { grid-area: map; }
+
+  .main-grid {
+    display: grid;
+    grid-template-areas:
+      'account map'
+      'account album';
+    grid-template-rows: auto 200px;
+    grid-template-columns: 400px auto;
+  }
+
+  .main-grid > div{
+    border: 1px dotted white;
+  }
+
+  .account-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
   .map-container {
-    width: 50%;
+    width: 100%;
     height: 70vh;
     border-radius: 10px;
-    margin-top: 50px;
     margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px; 
+    margin-right: auto; 
   }
 
-  .grid-container {
+  .album-grid > div{
     display: grid;
-    grid-gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    grid-auto-rows: 200px;
-    grid-auto-flow: dense;
-  }
-
-  .wide {
-    grid-column: span 2;
-  }
-
-  .tall {
-    grid-row: span 2;
+    grid-gap: 1px;
+    grid-template-columns: auto auto auto auto auto;
   }
 
   img {
     width: 100%;
     border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .b-signin {
+    display: block;
+    width: 100%;
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    margin: 0 auto;    
   }
