@@ -1,14 +1,22 @@
 import ReactDOM from "react-dom";
+import Header from "./Header";
+import Profiles from "./Profiles";
 import Map from "./Map";
-import Album from "./Album";
-import GoogleInfo from "./GoogleInfo";
-import { useLoadScript } from "@react-google-maps/api";
 
 const App = () => {
-  const { isLoaded } = useLoadScript({
-    //googleMapsApiKey: "", /TODO: This doesn't work
-    googleMapsApiKey: import.meta.env.VITE_GOOGLEMAPS_API_KEY,
-  });
+  return (
+    <div>
+      <Header />
+      <div style={{ width: "100%", overflow: "hidden" }}>
+        <Profiles />
+        <Map />
+      </div>
+    </div>
+  );
+};
+
+/*
+const App = () => {
 
   return (
     <div>
@@ -32,6 +40,7 @@ const App = () => {
     </div>
   );
 };
+*/
 
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);

@@ -1,68 +1,105 @@
+:root {
+  --red: #BD2A2E;
+  --black: #3B3936;
+  --gray: #B2BEBF;
+  --green: #889C9B;
+  --dgreen: #486966; 
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
-    background-color: black;
-    font-size: medium;
-    color: white;
-  }
+  margin: 0;
+  padding: 0;
+  background-color: var(--black);
+}
 
-  header {
-    text-align: center;
-    font-size: 100px;
-    height:50px;
-  }
+/* ---  profile header --- */
+.header-container {
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  border: 2px black;
+  border-style: none none solid none;
+}
 
-  .account-container { grid-area: account; }
-  .album-container { grid-area: album; }
-  .map-container { grid-area: map; }
+.header-container h1 {
+  float: left;
+  width: 300px;
+  font-size: 17px;
+}
 
-  .main-grid {
-    display: grid;
-    grid-template-areas:
-      'account map'
-      'account album';
-    grid-template-rows: auto 200px;
-    grid-template-columns: 400px auto;
-  }
+.header-container input[type=text] {
+  margin-top: 10px;
+  margin-bottom: auto;
+  margin-left: 300px;
+  border: 1px solid black;
+  font-size: 20px;
+  border-radius: 5px;
+  padding-right: 200px;
+}
 
-  .main-grid > div{
-    border: 1px dotted white;
-  }
+/* ---  profile classes --- */
+.profiles-container
+{
+  float: left;
+  height: 600px;
+  width: 300px;
+}
 
-  .account-container {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-  .map-container {
-    width: 100%;
-    height: 70vh;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto; 
-  }
+.profiles-container h1 {
+  text-align: center;
+  width: auto;
+  font-size: 50px;
+  background-color: var(--dgreen);
+  margin: auto;
+  padding: 10px;  
+}
+.account {
+  width: auto;
+  padding: 30px;
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  color: var(--dgreen);
+}
 
-  .album-grid > div{
-    display: grid;
-    grid-gap: 1px;
-    grid-template-columns: auto auto auto auto auto;
-  }
+.account:hover {
+  color: white;
+  background-color: var(--dgreen);
+  border: 5px solid black;
+}
 
-  img {
-    width: 100%;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.account-contents {
+  width: auto;
+  padding: 15px;
+  margin: 0;
+  font-size: 30px;
+  color: var(--dgreen);
+}
 
-  .b-signin {
-    display: block;
-    width: 100%;
-    background-color: white;
-    border: none;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+.account-contents:hover {
+  color: white;
+  background-color: var(--green);
+}
 
-    margin: 0 auto;    
-  }
+.folder-divider {
+  margin: 0 auto;
+  width: 80%;
+  border: 1px dashed var(--dgreen);
+}
+.account-divider {
+  margin: 0 auto;
+  width: 90%;
+  border: 1px solid var(--dgreen);
+}
+
+.map-container {
+  text-align: center;
+  width: auto;
+  height: 70vh;
+  margin: 0;
+}
