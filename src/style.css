@@ -10,6 +10,12 @@ html {
   box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,6 +33,7 @@ body {
 }
 
 .header-container h1 {
+  padding-left: 130px;
   float: left;
   width: 300px;
   font-size: 17px;
@@ -48,6 +55,8 @@ body {
   float: left;
   height: 600px;
   width: 300px;
+  border: 2px black;
+  border-style: none solid none none;
 }
 
 .profiles-container h1 {
@@ -56,10 +65,10 @@ body {
   font-size: 50px;
   background-color: var(--dgreen);
   margin: auto;
-  padding: 10px;  
+  padding: 10px;
 }
 .account {
-  width: auto;
+  width: 100%;
   padding: 30px;
   margin: 0;
   font-size: 30px;
@@ -67,9 +76,14 @@ body {
   color: var(--dgreen);
 }
 
+button {
+  background-color: var(--black);
+  border-style: none none none none;
+}
+
 .account:hover {
   color: white;
-  background-color: var(--dgreen);
+  /*background-color: var(--dgreen);*/
   border: 5px solid black;
 }
 
