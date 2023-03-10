@@ -4,6 +4,7 @@ import Profiles from "./Profiles";
 import Map from "./Map";
 
 const App = () => {
+  localStorage.clear();
   return (
     <div>
       <Header />
