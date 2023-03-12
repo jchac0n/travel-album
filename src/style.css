@@ -61,11 +61,14 @@ body {
 
 .profiles-container h1 {
   text-align: center;
-  width: auto;
-  font-size: 50px;
-  background-color: var(--dgreen);
-  margin: auto;
-  padding: 10px;
+  background-color: #75d7cb;
+  color: var(--dgreen);
+  border-style: none none none none;
+  font-size: 2rem;
+  padding: 30px 0;
+  margin: 0;
+  box-shadow: inset -5px -5px 10px #65b9af, inset 5px 5px 10px #85f5e7;
+  border-radius: 10px;
 }
 .account {
   width: 100%;
@@ -83,22 +86,27 @@ body {
 
 button {
   text-align: center;
-  background-color: var(--black);
+  background-color: #75d7cb;
   color: var(--dgreen);
   border-style: none none none none;
   font-size: 2rem;
   padding: 30px 0;
-  margin: 0;
+  margin: 5px 0 0 0;
+  box-shadow: inset -5px -5px 10px #65b9af, inset 5px 5px 10px #85f5e7;
+  border-radius: 10px;
 }
 
 button:hover {
   color: white;
   /*background-color: var(--dgreen);*/
-  border: 5px solid black;  
 }
 
 .btn-logout{
-  font-size: 1rem;
+  color: #75d7cb;
+  background-color: var(--black);
+  margin-left: 3px;
+  box-shadow: none;
+  border: 2px solid #75d7cb; 
 }
 
 .account:hover {

@@ -1,25 +1,25 @@
 import utils from "./loginUtils";
 
-// we can do useState here instead for this var?
-let loggedOn = false;
-
-function login() {
-  utils.googleLogIn();
-  loggedOn = true;
-}
-
-function logout() {
-  utils.googleLogOut();
-  loggedOn = false;
-}
-
 const GoogleProfile = () => {
-  utils.getDirectories();
+  const login = () => {
+    utils.googleLogIn();
+  };
 
-  // ----- there's gotta be a cleaner way with css?
+  const logout = () => {
+    utils.googleLogOut();
+  };
+
+  utils.googleGetDirectories();
+
+  // ----- there's gotta be a cleaner way to do all
+  //       this?
   let dynWidths = [];
-  if (loggedOn) {
-    dynWidths = ["85%", "15%"];
+  let loggedOn = false;
+
+  if (utils.isGoogleOn()) {
+    dynWidths = ["84%", "14%"];
+    loggedOn = true;
+    utils.googleGetDirectories();
   } else {
     dynWidths = ["100%", "0%"];
   }

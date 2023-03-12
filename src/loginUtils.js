@@ -3,7 +3,6 @@ let ACCESS_TOKEN = "";
 // Function contents copied directly from webninjadevelopers's
 // 'javascript-oauth2-google-login-logout-example-using-access-token-in-browser'
 // tutorial
-///TODO: get all these from  local file
 const googleLogIn = () => {
   const oauth2Endpoint = "https://accounts.google.com/o/oauth2/v2/auth";
 
@@ -13,8 +12,9 @@ const googleLogIn = () => {
   form.setAttribute("action", oauth2Endpoint);
 
   // Parameters to pass to OAuth 2.0 endpoint.
+  ///TODO: get all these params from  local file
   var params = {
-    client_id: "x",
+    client_id: "",
     redirect_uri: "http://127.0.0.1:5173/index.html",
     response_type: "token",
     scope: "https://www.googleapis.com/auth/drive",
@@ -82,7 +82,7 @@ function acquireToken() {
   console.log("i didn't find data!!!");
 }
 
-function getDirectories() {
+function googleGetDirectories() {
   searchFiles("mimeType contains 'image/'");
 }
 
@@ -110,4 +110,13 @@ function searchFiles(q = "") {
     });
 }
 
-export default { googleLogIn, googleLogOut, acquireToken, getDirectories };
+function isGoogleOn() {
+  return acquireToken() != null;
+}
+
+export default {
+  googleLogIn,
+  googleLogOut,
+  googleGetDirectories,
+  isGoogleOn,
+};
